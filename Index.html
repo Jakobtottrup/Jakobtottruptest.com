@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+<head>
+    <title>Jakobs Homepage</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+        body {
+            background-color: #f0f0f2;
+            margin: 0;
+            padding: 0;
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+        }
+        div {
+            width: 900px;
+            margin: 5em auto;
+            padding: 50px;
+            background-color: #fff;
+            border-radius: 1em;
+        }
+        a:link, a:visited {
+            color: #38488f;
+            text-decoration: none;
+        }
+        @media (max-width: 900px) {
+            body {
+                background-color: #fff;
+            }
+            div {
+                width: auto;
+                margin: 0 auto;
+                border-radius: 0;
+                padding: 1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div>
+    <a name="top"></a>
+    <h1>Jakobs Homepage</h1>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/CyESOpJ3RH4" frameborder="0" allowfullscreen></iframe>
+    <img src="Mus.jpg" width="315" height="315">
+
+    <p>This website is intended to act as an online CV and portfolio. It is also part of a learning experience with HTML, CSS and Javascript coding. Ideas and templates will be posted from time to time. When the course is completed, the proper domain will be purchased.</p>
+
+    <hr>
+    <BR><BR>
+    <h2>Chapter1: HTML Basics</h2>
+    <ul>
+        <li>Header tags</li>
+        <li>Paragraphs</li>
+        <li>Text formatting</li>
+        <li>Unordered and ordered lists</li>
+        <li>Images</li>
+        <li>Forms</li>
+        <li>Links</li>
+        <li>Tables</li>
+        <li>HTML Entities</li>
+        <li>IFrames (Embedded content)</li>
+    </ul>
+
+    <BR><BR><br>
+    <h3><u>Header Tags Example:</u></h3>
+    <h1>This is header 1 - tag: "h1"</h1>
+    <h2>This is header 2 - tag: "h2"</h2>
+    <h3>This is header 3 - tag: "h3"</h3>
+    <h4>This is header 4 - tag: "h4"</h4>
+    <h5>This is header 5 - tag: "h5"</h5>
+    <h6>This is header 6 - tag: "h6"</h6>
+
+    <BR><BR><br>
+    <h3><u>Paragraphs Example:</u></h3>
+    <p>There isn't much to demonstrate here except a plain text message like this one wrapped in paragraph tags - tag: "p"</p>
+
+    <br><br><br>
+    <h3><u>Text Formatting Examples:</u></h3>
+    <p>Text formatting is also called text decoration, ie. whether a word is <strong>bolded</strong>, <em>italic</em>, <u>underlined</u>, or <strike>struck through</strike>.</p>
+    <br>
+    <table>
+        <tr><th align="left">Format</th><th align="right">Tag</th></tr>
+        <tr><td>Bold</td><td align="right">&lt;strong&gt;</td></tr>
+        <tr><td>Italic</td><td align="right">&lt;em&gt;</td></tr>
+        <tr><td>Underline</td><td align="right">&lt;u&gt;</td></tr>
+        <tr><td>Strike Through</td><td align="right">&lt;strike&gt;</td></tr>
+    </table><h6>closing tags omitted for readability</h6>
+
+    <br><br><br>
+    <h3><u>Unordered and Ordered List Examples:</u></h3>
+    <p>Unordered just means bullet points, and ordered means numbered. Each item on the list must be wrapped with a &lt;li&gt; tag.</p>
+    <p>Unordered list tag: &lt;ul&gt;</p>
+    <ul>
+        <li>Test1</li>
+        <li>Test2</li>
+        <li>Test3</li>
+    </ul>
+    <p>Ordered list tag: &lt;ol&gt;</p>
+    <ol>
+        <li>Number1</li>
+        <li>Number2</li>
+        <li>Number3</li>
+    </ol>
+
+    <br><br><br>
+    <h3><u>Images Example:</u></h3>
+    <p>Images are declared using the &lt;img&gt; tag, and specifying the source path. If the image is saved in the same folder as the HTML file, "ImageFileName.Extension" will suffice as the source. If located elsewhere, the full file path must be included.</p>
+    <p>Images can also be used directly from the internet, by right-clicking and selecting "Copy img URL", and using that as the source. </p>
+    <p>Images can be re-sized by adding the height="" and width="" declarations after the source path.</p>
+    <table>
+        <tr><th align="left">Img from folder.</th><th align="right">Img from web.</th></tr>
+        <tr><td><img src="Mus.jpg" height="100" width="100"></td><td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/%D0%9C%D1%8B%D1%88%D1%8C_2.jpg/1024px-%D0%9C%D1%8B%D1%88%D1%8C_2.jpg" height="100" width="100"></td></tr>
+    </table>
+
+    <br><br><br>
+    <h3><u>Forms Example:</u></h3>
+    <form>
+        <p>Standard textform with placeholder text</p>
+        <input type="email" placeholder="type here.." name="email" />
+        <br><br>
+
+        <p>Larger textarea. Resizable.</p>
+        <textarea name="textarea"></textarea>
+        <br><br>
+
+        <p>Drop-down menu</p>
+        <select>
+            <option>Select an option..</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>
+        <br><br>
+
+        <p>Radio buttons (mutually exclusive when they belong to the same group - declared by giving the same name.)</p>
+        <input type="radio" name="Color" /> Red
+        <input type="radio" name="Color" /> Green
+        <br><br>
+
+        <p>Checkbox options.</p>
+        <input type="checkbox" name="dog" value=1 /> Dog
+        <input type="checkbox" /> Cat
+        <input type="checkbox" /> Fish
+        <br><br>
+
+        <p>Submit button. Can be linked</p>
+        <input type="submit" value="Click Me!" />
+    </form>
+
+    <br><br><br>
+    <h3><u>Links Examples:</u></h3>
+    <p>Links can send the user to an external site, or another page stored locally. Links can also be used to navigate on the current page.</p>
+
+    <p>External Link: <a href="https://www.google.dk">Google</a></p>
+    <p>Locally stored link: <a href="helloworld.html">Hello World</a></p>
+    <p>Navigation: <a href="#top">Back to top</a></p>
+    <p>Note: "&lt;a name="top"&gt;&lt;/a&gt;" must be defined where link destination is.</p>
+
+    <br><br><br>
+    <h3><u>Tables Examples</u></h3>
+    <p>&lt;table&gt; tags declare the scope of the table. Everything needs to be inside this to appear in the table.</p>
+    <p>&lt;tr&gt; tags represent a table row. &lt;th&gt; represents table headers and &lt;td&gt; represents the data for the table.</p>
+    <p>Images can also be used in a table. Same goes for text formatting and alignment.</p>
+
+    <br><br><br>
+    <h3><u>HTML Entities:</u></h3>
+    <p>HTML entities are just a way of writing reserved characters such as &lt; and &gt;. They always begin with "&amp;" and end with "&semi;". Click <a href="http://dev.w3.org/html5/html-author/charref">here</a> for a quick reference of entities.</p>
+
+    <br><br><br>
+    <h3><u>IFrames (Embedded Content):</u></h3>
+    <p>IFrames can be used to embed content from other pages. Locally stored or external. Also used for youtube videoes.</p>
+    <br>
+    <iframe align="left" height="315" src="helloworld.html"></iframe>
+
+    <iframe align="right" width="560" height="315" src="https://www.youtube.com/embed/UPftsIwGNoQ" frameborder="0" allowfullscreen></iframe>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+
+<div>
+    <footer><img align="middle" height="100" width="200" src="http://ohdoylerules.com/content/images/html5css3badges.png"></footer>
+</div>
+</body>
+</html>
