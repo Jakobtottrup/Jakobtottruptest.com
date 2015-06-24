@@ -8,7 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type="text/css">
         body {
-            background-color: #3F5024;
+            background-color: #rgb(169, 46, 51);
+            /*
+            Comment testing for git + FTP connection
+            */
+
             margin: 0;
             padding: 0;
             font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
