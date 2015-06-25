@@ -1,68 +1,139 @@
 <!doctype html>
 <html>
 <head>
-    <title>Jakobs Homepage</title>
+    <title>Jakobs Tøttrup</title>
 
     <meta charset="utf-8"/>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <style type="text/css">
+
         body {
-            background-color: #E9EAED;
+            background-color: ghostwhite;
             margin: 0;
             padding: 0;
             font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        #container {
 
         }
 
-        div {
-            width: 900px;
-            margin: 5em auto;
-            padding: 50px;
-            background-color: #fff;
-            border-radius: 1em;
+        #topbar {
+            background-color: #afc0ed;
+            width: 100%;
+            height: 40px;
+            color: white;
+            font-size: large;
+            font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+            padding: 10px 0 0 10px;
+
         }
 
-        a:link, a:visited {
-            color: #38488f;
-            text-decoration: none;
+        .fixedwidth {
+            width: 1050px;
+            margin: 0 auto;
         }
 
-        @media (max-width: 900px) {
-            body {
-                background-color: #fff;
-            }
+        .content {
+            width: 1050px;
+            float: top;
+            align-content: center;
+            padding: 10px;
+            border: medium;
+            border-radius: .8em;
+            margin: 2em auto;
+            background-color: white;
+        }
 
-            div {
-                width: auto;
-                margin: 0 auto;
-                border-radius: 0;
-                padding: 1em;
-            }
+        /*a:visited {*/
+            /*color: mediumblue;*/
+        /*}*/
+        a {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        #topmenudiv {
+            float: left;
+
+        }
+
+        #topmenudiv ul{
+            margin: 0;
+            padding: 0;
+        }
+
+        #topmenudiv li{
+            list-style: none;
+            height: 100%;
+            padding: 10px 10px 8px 10px;
+            float: left;
+
+
+
+        }
+
+        .selected {
+            background-color: ghostwhite;
+            background-position: top;
+            height: inherit;
+            width: inherit;
+
+
         }
     </style>
 </head>
 
 <body>
-<div>
-    <a name="top"></a>
 
-    <h1>Jakobs Homepage</h1>
+<div id="container">
+    <div id="topbar">
+        <div class="fixedwidth">
+            <div id="topmenudiv">
+                <ul>
+                    <li class="selected"><a href="index.html">Home</a></li>
+                    <li><a href="webdev/chapter1.html">Web Dev</a></li>
+                    <li><a href="uni.html">University work</a></li>
+                    <li><a href="books.html">Books</a></li>
+                    <li><a href="cv.html">Curriculum Vitae</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="https://github.com/Jakobtottrup" target=_blank>Github</a></li>
+                </ul>
+            </div>
+        </div>
 
-    <p>This website is intended to act as an online CV and portfolio. It is also part of a learning experience with
-        HTML, CSS and Javascript coding. Ideas and templates will be posted from time to time. When the course is
-        completed, the proper domain will be purchased.</p>
-    <ul>
-        <li><a href="chapter1.html">Chapter1</a></li>
-        <li><a href="chapter2.html">Chapter2</a></li>
-    </ul>
+    </div>
 
+    <div class="content">
+        <a name="top"></a>
 
-    <hr>
-    <BR><BR>
+        <h1>Homepage</h1>
+
+        <p>This website is intended to act as an online CV and portfolio. It is also part of a learning experience with
+            HTML, CSS and Javascript coding. Ideas and templates will be posted from time to time. When the course is
+            completed, the proper domain will be purchased.</p>
+    </div>
+
+    <div class="content">
+        <h2>This is a placeholder div</h2>
+
+        <p>Short introduction will go here</p>
+    </div>
+    <div class="content">
+        <h2>This is a placeholder div</h2>
+
+        <p>Logo for each language/tool</p>
+    </div>
+    <div class="content">
+        <h2>This is a placeholder div</h2>
+
+        <p>Footer with contact information</p>
+    </div>
 
 
 </div>
+
 
 </body>
 </html>
