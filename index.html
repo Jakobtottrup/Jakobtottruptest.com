@@ -8,11 +8,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <style type="text/css">
 
+        * {
+            margin: 0;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        .wrapper {
+            min-height: 100%;
+            margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
+        }
+
+        .footer {
+            height: 50px; /* .push must be the same height as .footer */
+            width: 1050px;
+            float: bottom;
+            padding: 10px;
+            border: medium;
+            border-radius: .8em;
+            margin: 2em auto;
+            /*align-content: center;*/
+
+        }
+
+        .push {
+            height: 150px;
+        }
+
         body {
+            height: 100%;
             background-color: ghostwhite;
             margin: 0;
             padding: 0;
-            padding-bottom: 60px; /* Height of the footer */
             font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
 
@@ -82,15 +111,28 @@
 
         }
 
+        #footerdiv {
+            width: 445px;
+            margin: 0 auto;
+        }
 
+        #footerdiv ul {
+            margin: 0;
+            padding: 0;
 
+        }
+
+        #footerdiv li {
+            list-style: none;
+            padding: 0 20px 0 20px;
+            float: left;
+        }
 
     </style>
 </head>
 
 <body>
-
-<div id="container">
+<div class="wrapper">
     <div id="topbar">
         <div class="fixedwidth">
             <div id="topmenudiv">
@@ -120,29 +162,58 @@
     </div>
 
     <div class="content">
-        <h2>This is a placeholder div</h2>
+        <h2>Work in progress</h2>
 
-        <p>Short introduction will go here</p>
+        <p>Small image of current code. Also testing settings/options.</p>
+        <br/>
+
+        <img src="screen.jpg" title="Hello"/>
     </div>
     <div class="content">
-        <h2>This is a placeholder div</h2>
+        <h2>Logo for each language/tool</h2>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>Javascript</li>
+            <li>Google Chrome</li>
+            <li>WebStorm</li>
+            <li>Java</li>
+            <li>Python</li>
+            <li>Sublime Text</li>
+            <br/>
+        </ul>
 
-        <p>Logo for each language/tool</p>
     </div>
+
     <div class="content">
-        <h2>This is a Footer Div</h2>
-        <img src="https://cdn.shopify.com/s/files/1/0682/0073/files/facebook_icon.gif?786" alt=""/>
-        <img src="http://www.techtoxin.com/wp-content/uploads/2013/08/gmail-logo-cloud-computing-50x50.png" alt=""/>
-        <img src="http://saitsa.com/wp-content/uploads/2013/09/linkein-logo.png" alt=""/>
-        <img src="https://cdn.shopify.com/s/files/1/0682/0073/files/twitter_icon.png?789" alt=""/>
+        <h2>To Do:</h2>
+        <br/><br/>
+        <ul>
+            <li>External CSS</li>
+            <li>Continue Javascript course</li>
+            <li>Links on bottom images</li>
+            <li>Clean code</li>
+            <li>Create content for other pages</li>
+            <li>"Shadowed Border</li>
+        </ul>
+        <br/><br/>
+
     </div>
 
 
-
-
+    <div class="push"></div>
+</div>
+<div class="footer">
+    <div id="footerdiv">
+        <ul style="alignment:center">
+            <li><img src="https://cdn.shopify.com/s/files/1/0682/0073/files/facebook_icon.gif?786" alt=""/></li>
+            <li><img src="http://www.techtoxin.com/wp-content/uploads/2013/08/gmail-logo-cloud-computing-50x50.png" alt=""/></li>
+            <li><img src="http://saitsa.com/wp-content/uploads/2013/09/linkein-logo.png" alt=""/></li>
+            <li><img src="https://cdn.shopify.com/s/files/1/0682/0073/files/twitter_icon.png?789" alt=""/></li>
+        </ul>
+    </div>
 
 </div>
-
 
 </body>
 </html>
