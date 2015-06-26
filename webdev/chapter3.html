@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+    <title>Chapter3 - Javascript basics</title>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <style>
+
+        #circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            background-color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<button id="textChanger">Change first div text</button>
+
+<div id="firstDiv">This is some text.</div>
+
+<button id="textAppender">Append some text.</button>
+
+<div id="secondDiv">Javascript is..</div>
+
+<button id="textCreator">Create Text</button>
+
+<div id="emptyDiv"></div>
+
+<br/><br/><br/><br/><br/><br/>
+
+<div id="circle"></div>
+
+<br/><br/><br/><br/><br/><br/>
+
+<input type="text" id="myInput" value="test"/>
+
+<button id="stylesChanger">Change the text</button>
+
+<div id="thirdDiv"> This is some text</div>
+
+<br/><br/><br/><br/><br/><br/>
+
+<button id="arrayChanger">Change the text</button>
+
+<div id="fourthDiv"> This is fourth div text</div>
+
+<br/><br/><br/><br/><br/><br/>
+
+<p>what is the weather?</p>
+<input type="text" id="weather"/>
+<button id="weatherButton">Submit</button>
+
+<script type="text/javascript">
+
+
+    //==================================== Scripts ====================================//
+    document.getElementById("textChanger").onclick = function () {
+        document.getElementById("firstDiv").innerHTML = "This is cool.";
+    }
+
+    document.getElementById("textAppender").onclick = function () {
+        document.getElementById("secondDiv").innerHTML = document.getElementById("secondDiv").innerHTML + " cool";
+    }
+
+    document.getElementById("textCreator").onclick = function () {
+        document.getElementById("emptyDiv").innerHTML = "<ul><li>Cat</li><li>Cat</li><li>Cat</li></ul>";
+    }
+
+    document.getElementById("circle").onclick = function () {
+        document.getElementById("circle").style.display = "none";
+    }
+
+
+    //==================================== Variables ====================================//
+    var newText = document.getElementById("myInput").value;
+
+    document.getElementById("stylesChanger").onclick = function () {
+        newText = document.getElementById("myInput").value;
+        document.getElementById("thirdDiv").innerHTML = newText;
+    }
+
+
+    //==================================== Arrays ====================================//
+
+    var myArray = new Array();
+    myArray[0] = "pizza";
+    myArray[1] = "burger";
+    myArray[2] = "apple";
+
+    console.log(myArray);
+
+    myOtherArray = ["rain", "sunshine", "cloudy"];
+    myOtherArray.push("snow");
+    //.push adds the element at the end of the array.
+
+    myOtherArray.splice(1, 0, "hail");
+    //.splice removes elements. first number is array position,
+    // second number is how many elements starting from that position to remove
+
+
+    console.log(myOtherArray);
+    console.log(myOtherArray.length);
+
+
+    document.getElementById("arrayChanger").onclick = function () {
+        document.getElementById("fourthDiv").innerHTML = myArray[0];
+    }
+
+    //==================================== If-statements ====================================//
+
+    var x = 2;
+
+    if (x == 1) {
+        alert("x is 1!");
+    } else {
+        alert("x is NOT 1");
+    }
+
+    document.getElementById("weatherButton").onclick = function(){
+        if(document.getElementById("weather").value=="rain"){
+            alert("It's raining.");
+        }
+        else{
+            alert("It's not raining.");
+        }
+
+    }
+
+</script>
+
+</body>
+</html>
