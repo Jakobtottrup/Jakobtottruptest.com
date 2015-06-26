@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="../styles.css"/>
+    <title>Reaction Tester</title>
+
+</head>
+<style>
+    #box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        display: none;
+        position: relative;
+    }
+
+    body {
+        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+</style>
+
+<body>
+<div class="wrapper">
+    <div id="topbar">
+        <div class="fixedwidth">
+            <div id="topmenudiv">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="chapter1.html">Web Dev</a></li>
+                    <li><a href="../uni.html">University work</a></li>
+                    <li><a href="../books.html">Books</a></li>
+                    <li><a href="../cv.html">Curriculum Vitae</a></li>
+                    <li><a href="../portfolio.html">Portfolio</a></li>
+                    <li><a href="https://github.com/Jakobtottrup" target=_blank>Github</a></li>
+                    <li class="selected"><a href="js_challenge.html">Reaction Game</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content" style="height: 800px"><h1>Test your reactions!</h1>
+
+        <p>Click the boxes and circles as quickly as you can.</p>
+
+        <p class="bold">Your time: <span id="time">0</span> seconds.</p>
+
+        <div id="box"></div>
+
+
+        <script type="text/javascript" src="scripts.js"></script>
+    </div>
+</div>
+</body>
+
+</html>

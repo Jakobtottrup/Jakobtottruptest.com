@@ -32,11 +32,15 @@
 
 <div id="emptyDiv"></div>
 
-<br/><br/><br/><br/><br/><br/>
+<br/><br/><br/>
+<hr/>
+<br/><br/><br/>
 
 <div id="circle"></div>
 
-<br/><br/><br/><br/><br/><br/>
+<br/><br/><br/>
+<hr/>
+<br/><br/><br/>
 
 <input type="text" id="myInput" value="test"/>
 
@@ -44,17 +48,35 @@
 
 <div id="thirdDiv"> This is some text</div>
 
-<br/><br/><br/><br/><br/><br/>
+<br/><br/><br/>
+<hr/>
+<br/><br/><br/>
 
 <button id="arrayChanger">Change the text</button>
 
 <div id="fourthDiv"> This is fourth div text</div>
 
-<br/><br/><br/><br/><br/><br/>
+<br/><br/><br/>
+<hr/>
+<br/><br/><br/>
 
 <p>what is the weather?</p>
 <input type="text" id="weather"/>
 <button id="weatherButton">Submit</button>
+
+<br/><br/><br/>
+<hr/>
+<br/><br/><br/>
+
+<p id="arrayString"></p>
+
+<br/><br/><br/>
+<hr/>
+<br/><br/><br/>
+
+<p id="functionParagraph"></p>
+
+
 
 <script type="text/javascript">
 
@@ -88,7 +110,7 @@
 
     //==================================== Arrays ====================================//
 
-    var myArray = new Array();
+    var myArray = [];
     myArray[0] = "pizza";
     myArray[1] = "burger";
     myArray[2] = "apple";
@@ -122,16 +144,49 @@
         alert("x is NOT 1");
     }
 
-    document.getElementById("weatherButton").onclick = function(){
-        if(document.getElementById("weather").value=="rain"){
+    document.getElementById("weatherButton").onclick = function () {
+        if (document.getElementById("weather").value == "rain") {
             alert("It's raining.");
         }
-        else{
+        else {
             alert("It's not raining.");
         }
 
     }
 
+    //==================== Loops //====================
+
+
+    var arrayString = "";
+    var loopArray = ["pizza", "cheese", "chips", "ice",]
+
+    //    for (var i = 0; i < myArray.length; i++)
+    //    {
+    //        arrayString = arrayString + myArray[i]+" ";
+    ////        alert(myArray[i]);
+    //    }
+    //    document.getElementById("arrayString").innerHTML = arrayString;
+
+    var i = 0;
+
+    while (i < loopArray.length) {
+        arrayString = arrayString + loopArray[i] + " ";
+        i++;
+    }
+        document.getElementById("arrayString").innerHTML = arrayString;
+
+
+    //===================== Functions =========================//
+    // Works just like javas methods.
+    function alertMe() {
+        alert("Hello");
+    }
+//    alertMe();
+
+    function adding(a,b) {
+        return(a + b);
+    }
+    document.getElementById("functionParagraph").innerHTML=adding(3, 54);
 </script>
 
 </body>

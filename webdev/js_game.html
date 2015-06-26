@@ -8,29 +8,67 @@
 </head>
 
 
-
 <body>
 <p>Guess a number between 0 and 5.</p>
 <input id="answer"/>
 <button id="myButton">Submit</button>
 
-<script type="text/javascript">
-    document.getElementById("myButton").onclick=function(){
-        var x=Math.random();
-        x=6*x;
-        x=Math.floor(x);
+<br/><br/><br/>
+<hr/>
+<br/><br/><br/>
 
-        if (x==document.getElementById("answer").value){
+<p>How many fingers are you holding up?</p>
+
+<input id="myNumber" placeholder="Enter a number. 1-5"/>
+<button id="guess">Guess</button>
+
+<script type="text/javascript">
+
+    // ================== Numberguesser ============== //
+    document.getElementById("myButton").onclick = function () {
+        var x = Math.random();
+        x = 6 * x;
+        x = Math.floor(x);
+
+        if (x == document.getElementById("answer").value) {
             alert("Correct!");
         }
-        else{
-            alert("Wrong! My number was "+ x);
+        else {
+            alert("Wrong! My number was " + x);
         }
     }
+    //    alert(x);
 
 
+    // ================== reverse Numberguesser ============== //
+    document.getElementById("guess").onclick = function () {
 
-//    alert(x);
+        var gotIt = false;
+        var guesses = 1;
+        var x;
+
+
+        while (gotIt == false) {
+            var x = Math.random();
+            x = 6 * x;
+            x = Math.floor(x);
+
+
+            if (document.getElementById("myNumber").value <= 5) {
+                if (document.getElementById("myNumber").value == x) {
+                    gotIt = true;
+                } else {
+                    guesses++;
+                }
+            } else {
+                alert("Only numbers 1-5 work");
+                break;
+
+            }
+
+        }
+        alert("Got it! It was a " + x + ". It only took me " + guesses + " guesses.");
+    };
 
 
 </script>
