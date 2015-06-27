@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learning jQuery</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <style type="text/css">
+        .square {
+            width: 30px;
+            height: 30px;
+            background-color: red;
+            margin-top: 10px;
+
+        }
+
+        #circle {
+            width: 20px;
+            height: 20px;
+            background-color: green;
+            border-radius: 100px;
+
+        }
+    </style>
+
+</head>
+    <body>
+        <div id="circle"></div>
+        <p>This is some text</p>
+        <iframe src="http://www.cnn.com" frameborder="0"></iframe>
+        <br/><br/><br/>
+
+        <div class="square"></div>
+        <div class="square"></div>
+
+        <p id="fadeText">This text will fade away when the button below is clicked!</p>
+        <button id="fadeButton">Fade out</button>
+        <button id="unfadeButton">Fade in</button>
+
+
+
+        <script>
+
+            $("#circle").hover(function () {
+                $("iframe").attr("src", "http://bbc.co.uk"); //omit second string to return value
+                $("p").html("Changed");
+
+            });
+
+            //        $("div").click(function () {
+            //           $(this).css("width", "400px");
+            //        });
+            //
+            //        $("div").click(function () {
+            //            $(this).css("display", "none");
+            //        });
+
+            //        $("div").click(function () {                    //.hide() == .css("display", "none");
+            //            $(this).hide();
+            //        });
+
+            //            $("div").click(function () {
+            //                $(this).fadeOut();
+            //            });
+
+            $("#circle").click(function () {
+                $(".square").fadeOut();
+            });
+
+            $("#fadeButton").click(function () {
+                $("#fadeText").fadeOut("slow", function () {
+                    alert("FadeOut complete!");
+                });
+            });
+
+            $("#unfadeButton").click(function () {
+                $("#fadeText").fadeIn("fast");
+            });
+
+
+        </script>
+
+
+    </body>
+</html>
