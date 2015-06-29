@@ -121,3 +121,89 @@ a {
     padding: 0 20px 0 20px;
     float: left;
 }
+
+
+/*============================================================*/
+
+
+#primary_nav_wrap
+{
+    /*margin-top:15px;*/
+    /*margin-bottom: -30px;*/
+}
+
+#primary_nav_wrap ul
+{
+    list-style:none;
+    position:relative;
+    float:left;
+    margin:0;
+    padding:0
+}
+
+#primary_nav_wrap ul a
+{
+    display:block;
+    color:#333;
+    text-decoration:none;
+    font-weight:700;
+    font-size:12px;
+    line-height:32px;
+    padding:0 15px;
+    font-family:'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+}
+
+#primary_nav_wrap ul li
+{
+    position:relative;
+    float:left;
+    margin:0;
+    padding:0;
+    border-radius: 6px 6px 0 0;
+}
+
+#primary_nav_wrap ul li.selected
+{
+    background:#F8F8FF;
+    padding-bottom: 8px;
+}
+
+#primary_nav_wrap ul li:hover
+{
+    background:#F8F8FF;
+    padding-bottom: 8px;
+}
+
+#primary_nav_wrap ul ul
+{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background:#fff;
+    padding:0;
+    border: solid  1px #F8F8FF;
+}
+
+#primary_nav_wrap ul ul li
+{
+    float:none;
+    width:200px
+}
+
+#primary_nav_wrap ul ul a
+{
+    line-height:120%;
+    padding:10px 15px
+}
+
+#primary_nav_wrap ul ul ul
+{
+    top:0;
+    left:100%
+}
+
+#primary_nav_wrap ul li:hover > ul
+{
+    display:block
+}
