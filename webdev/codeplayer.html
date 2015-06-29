@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Codeplayer</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script type="text/javascript"
+            src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <style type="text/css">
+        #wrapper {
+
+        }
+
+        #header {
+
+            height: 40px;
+            /*margin: 0;*/
+            padding: 0;
+            margin: -8px;
+            background-color: #DCDCDC;
+
+        }
+
+        #title {
+            width: 100px;
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: bold;
+            padding-top: 10px;
+            padding-left: 20px;
+            /*position: relative;*/
+            border-right: solid 10px black;
+            float: left;
+        }
+
+        #menu {
+            margin: 0 auto;
+            width: 220px;
+            padding: 5px;
+        }
+
+        #menu ul {
+            border: 1px solid grey;
+            border-radius: 5px;
+            height: 30px;
+        }
+
+        #menu li {
+            float: left;
+            list-style: none;
+            border-right: 1px solid grey;
+            height: 20px;
+            padding: 5px 10px;
+        }
+
+        #tabs {
+            margin: 0 auto;
+            alignment: center;
+        }
+    </style>
+</head>
+
+<body>
+<div id="wrapper">
+    <div id="header">
+        <div id="title">CodePlayer</div>
+        <div id="menu">
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JS</li>
+                <li>Result</li>
+            </ul>
+        </div>
+        <div id="run"></div>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>

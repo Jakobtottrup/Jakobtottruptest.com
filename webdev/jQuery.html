@@ -24,65 +24,118 @@
             border-radius: 100px;
 
         }
+
+        #aniCircle {
+            width: 20px;
+            height: 20px;
+            background-color: green;
+            border-radius: 100px;
+        }
     </style>
 
 </head>
-    <body>
-        <div id="circle"></div>
-        <p>This is some text</p>
-        <iframe src="http://www.cnn.com" frameborder="0"></iframe>
-        <br/><br/><br/>
+<body>
+<div id="circle"></div>
+<p>This is some text</p>
+<iframe src="http://www.cnn.com" frameborder="0"></iframe>
+<br/><br/><br/>
 
-        <div class="square"></div>
-        <div class="square"></div>
+<div class="square"></div>
+<div class="square"></div>
 
-        <p id="fadeText">This text will fade away when the button below is clicked!</p>
-        <button id="fadeButton">Fade out</button>
-        <button id="unfadeButton">Fade in</button>
-
-
-
-        <script>
-
-            $("#circle").hover(function () {
-                $("iframe").attr("src", "http://bbc.co.uk"); //omit second string to return value
-                $("p").html("Changed");
-
-            });
-
-            //        $("div").click(function () {
-            //           $(this).css("width", "400px");
-            //        });
-            //
-            //        $("div").click(function () {
-            //            $(this).css("display", "none");
-            //        });
-
-            //        $("div").click(function () {                    //.hide() == .css("display", "none");
-            //            $(this).hide();
-            //        });
-
-            //            $("div").click(function () {
-            //                $(this).fadeOut();
-            //            });
-
-            $("#circle").click(function () {
-                $(".square").fadeOut();
-            });
-
-            $("#fadeButton").click(function () {
-                $("#fadeText").fadeOut("slow", function () {
-                    alert("FadeOut complete!");
-                });
-            });
-
-            $("#unfadeButton").click(function () {
-                $("#fadeText").fadeIn("fast");
-            });
+<p id="fadeText">This text will fade away when the button below is clicked!</p>
+<button id="fadeButton">Fade out</button>
+<button id="unfadeButton">Fade in</button>
 
 
-        </script>
+<div id="aniCircle"></div>
+
+<br/><br/><br/>
+<hr/>
+
+<div><h1>Asyncronous Javascript And XML - AJAX</h1></div>
+<br/><br/>
 
 
-    </body>
+
+<script>
+
+    $("#circle").hover(function () {
+        $("iframe").attr("src", "http://bbc.co.uk"); //omit second string to return value
+        $("p").html("Changed");
+
+    });
+
+    //        $("div").click(function () {
+    //           $(this).css("width", "400px");
+    //        });
+    //
+    //        $("div").click(function () {
+    //            $(this).css("display", "none");
+    //        });
+
+    //        $("div").click(function () {                    //.hide() == .css("display", "none");
+    //            $(this).hide();
+    //        });
+
+    //            $("div").click(function () {
+    //                $(this).fadeOut();
+    //            });
+
+    $("#circle").click(function () {
+        $(".square").fadeOut();
+    });
+
+    $("#fadeButton").click(function () {
+        $("#fadeText").fadeOut("slow", function () {
+            alert("FadeOut complete!");
+        });
+    });
+
+    $("#unfadeButton").click(function () {
+        $("#fadeText").fadeIn("fast");
+    });
+
+    $("#aniCircle").click(function () {
+        $(this).animate({
+            width: "300px",
+            height: "300px",
+            borderRadius: "150px",
+            marginLeft: "100px",
+            marginTop: "100px",
+
+            }, 500);
+    });
+
+    //============================ AJAX =============================//
+
+//    $.get("chapter1.html", function (data) {
+//        alert(data);
+//    });
+
+    $.ajax({
+        url:"helloworld.html"
+    }).done(function (data) {
+        alert(data);
+//        $("h1").html(data);
+//        $("h1").append(data);
+    });
+
+
+    //================== Regular Expressions ================//
+
+    var regex=/e/g;
+
+    var string="Regex is great!";
+
+    var result = string.match(regex);
+
+    //    alert(result);
+
+
+
+</script>
+
+
+</body>
 </html>
