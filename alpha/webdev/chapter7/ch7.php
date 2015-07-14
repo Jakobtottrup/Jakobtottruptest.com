@@ -8,14 +8,59 @@
 <div>
     <?php
 
-    $emailTo = "hvt@novonordisk.com";
+    $emailTo = "jakobtottrup@gmail.com";
     $subject = "I hope this works";
     $body = "This is the body of the email.";
     $headers = "From: Jakob Tøttrup";
-    mail($emailTo, $subject, $body, $headers);
+
+    // ============== Sends 10 emails ========== //
+    //    for ($i=0;$i<=10;$i++) {
+    //        if (mail($emailTo, $subject, $body, $headers)) {
+    //
+    //            echo "Mail sent successfully!";
+    //
+    //        } else {
+    //
+    //            echo "Mail not sent!";
+    //
+    //        }
+    //    }
 
 
     ?>
+    <?php
+
+    $names = array("Fred", "Jakob", "Bob");
+    if ($_POST["submit"]) {
+
+        if ($_POST["name"]) {
+
+            foreach ($names as $name) {
+                if ($_POST["name"]==$name) {
+                    echo "Hello $name";
+                    $knowYou = 1;
+                }
+
+           }
+            if (!$knowYou) {
+                echo "I don't know you";
+            }
+
+        } else {
+
+            echo "Please enter your name";
+
+        }
+
+    }
+
+
+    ?>
+    <form method="post">
+        <label for="name">Name</label>
+        <input name="name" type="text"/>
+        <input type="submit" name="submit" value="Submit Your Name"/>
+    </form>
 </div>
 </body>
 </html>
