@@ -1,5 +1,24 @@
-<?php include("login.php"); ?>
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Jakob
+ * Date: 20-07-2015
+ * Time: 18:24
+ */
 
+session_start();
+
+include("connection.php");
+
+$query="SELECT diary FROM users WHERE id='".$_SESSION['id']."' LIMIT 1";
+
+$result = mysqli_query($link,$query);
+
+$row = mysqli_fetch_array($result);
+
+$diary=$row['diary'];
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +27,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Online Diary</title>
+    <title>Main Page</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -43,7 +62,7 @@
         }
 
         #topRow {
-            margin-top:100px;
+            margin-top:80px;
             text-align:center;
         }
 
@@ -97,41 +116,18 @@
 
     <div class="container">
 
-        <div class="navbar-header">
+        <div class="navbar-header pull-left">
 
-            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 
-                <span class="icon-bar"></span>
-
-                <span class="icon-bar"></span>
-
-                <span class="icon-bar"></span>
-
-            </button>
 
             <a class="navbar-brand">Secret Diary</a>
 
         </div>
 
-        <div class="collapse navbar-collapse">
+        <div class="pull-right">
+            <ul class= "navbar-nav nav">
+                <li><a href="index.php?logout=1">Log Out</a></li>
 
-            <form class="navbar-form navbar-right" method="post">
-
-                <div class="form-group">
-
-                    <input type="email" name="loginemail" placeholder="Email" class="form-control" value="<?php echo addslashes($_POST['loginemail']); ?>" />
-
-                </div>
-
-                <div class="form-group">
-
-                    <input type="password" name="loginpassword" placeholder="Password" class="form-control" value="<?php echo addslashes($_POST['loginpassword']); ?>" />
-
-                </div>
-
-                <input type="submit" name= "submit" class="btn btn-success" value="Log In">
-
-            </form>
 
         </div>
 
@@ -145,58 +141,12 @@
 
         <div class="col-md-6 col-md-offset-3" id="topRow">
 
-            <h1 class="marginTop">Secret Diary</h1>
-
-            <p class="lead">Your own private diary, with you wherever you go.</p>
-
-
-            <?php
-
-            if ($error) {
-
-                echo '<div class="alert alert-danger">'.addslashes($error).'</div>';
-
-            }
-
-            if ($message) {
-
-                echo '<div class="alert alert-success">'.addslashes($message).'</div>';
-
-            }
-
-            ?>
-
-
-            <p class="bold marginTop">Interested? Sign Up Below!</p>
-
-            <form class="marginTop" method="post">
-
-                <div class="form-group">
-
-                    <label for="email">Email Address</label>
-
-                    <input type="email" name="email" class="form-control" placeholder="Your Email" value="<? echo addslashes($_POST['email']); ?>" />
-
-                </div>
-
-                <div class="form-group">
-
-                    <label for="password">Password</label>
-
-                    <input type="password" name="password" class="form-control" placeholder="Password" value="<? echo addslashes($_POST['password']); ?>" />
-
-                </div>
-
-                <input type="submit" name="submit" value="Sign Up" class="btn btn-success btn-lg marginTop"/>
-
-            </form>
-
+            <textarea class="form-control"><?php echo $diary; ?></textarea>
         </div>
 
     </div>
 
 </div>
-
 
 
 
@@ -213,6 +163,16 @@
 
 
     $(".contentContainer").css("min-height",$(window).height());
+
+    $("textarea").css("height",$(window).height()-110);
+
+    $("textarea").keyup(function() {
+
+        $.post("updatediary.php", {diary:$("textarea").val()} );
+
+    });
+
+
 
 </script>
 
