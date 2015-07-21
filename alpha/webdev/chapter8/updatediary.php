@@ -14,4 +14,6 @@ $query="UPDATE users SET diary='".mysqli_real_escape_string($link, $_POST['diary
 
 mysqli_query($link, $query);
 
+//test
+
 ?>
