@@ -9,7 +9,7 @@
     <?php
 
     $emailTo = "jakobtottrup@gmail.com";
-    $subject = "I hope this works";
+    $subject = "Hej Ander Thrane";
     $body = "This is the body of the email.";
     $headers = "From: Jakob Tøttrup";
 
